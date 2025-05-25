@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: NeStarter
+  datasource:
+    username: postgres
+    password: 1234
+    url: jdbc:postgresql://localhost:5432/ne_starter
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+
+server:
+  port: 8900
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
